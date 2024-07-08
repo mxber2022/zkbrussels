@@ -44,7 +44,7 @@ export default function Input({
     setPrice(price);
     // Estimate gas required for transaction
     if (!greeterInstance) return;
-    let gasEstimate = await greeterInstance.estimateGas["setGreeting"](message);
+    let gasEstimate = await greeterInstance.estimateGas["withdraw"]();
     let gas = ethers.utils.formatEther(gasEstimate.toString());
     setGas(gas);
     // Calculate the cost: gasPrice * gasEstimate

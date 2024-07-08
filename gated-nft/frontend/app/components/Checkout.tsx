@@ -23,17 +23,17 @@ export default function Checkout({
       let txHandle;
       if (hasNFT) {
         const params = await usePaymaster({ greeterInstance, message, price });
-        txHandle = await greeterInstance.setGreeting(message, params);
+        txHandle = await greeterInstance.withdraw(params);
       } else {
-        txHandle = await greeterInstance.setGreeting(message);
+        txHandle = await greeterInstance.withdraw();
       }
 
       // Wait until the transaction is committed
       await txHandle.wait();
 
       // Update greeting
-      const updatedGreeting = await greeterInstance.greet();
-      setGreetingMessage(updatedGreeting);
+      // const updatedGreeting = await greeterInstance.greet();
+      setGreetingMessage("done");
     } catch (error) {
       console.error("Failed to update greeting: ", error);
     }
@@ -56,7 +56,7 @@ export default function Checkout({
             <dl className="mt-4 space-y-6 text-sm font-medium text-gray-500">
               <div className="flex justify-between">
                 <dt>Transaction: </dt>
-                <dd className="text-gray-900">setGreeting</dd>
+                <dd className="text-gray-900">faucet</dd>
               </div>
               <div className="flex justify-between">
                 <dt>Transaction Fee: </dt>
@@ -116,7 +116,7 @@ export default function Checkout({
               onClick={() => updateGreeting({ message })}
               className="mt-6 w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
-              Change Greeting for {hasNFT ? "FREE" : cost + " ETH"}
+              Claim Faucet for {hasNFT ? "FREE" : cost + " ETH"}
             </button>
           </div>
         </section>

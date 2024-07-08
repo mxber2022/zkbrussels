@@ -15,7 +15,7 @@ const usePaymaster = async ({
   });
 
   // estimate gasLimit via paymaster
-  const gasLimit = await greeterInstance.estimateGas.setGreeting(message, {
+  const gasLimit = await greeterInstance.estimateGas.withdraw( {
     customData: {
       gasPerPubdata: utils.DEFAULT_GAS_PER_PUBDATA_LIMIT,
       paymasterParams: paymasterParams,

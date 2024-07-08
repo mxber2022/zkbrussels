@@ -37,17 +37,18 @@ function WalletComponent() {
 
       web3Context.setGreeterContractInstance(greeterContract);
 
-      const fetchedGreeting = await greeterContract.greet();
-      web3Context.setGreetingMessage(fetchedGreeting);
+      //const fetchedGreeting = await greeterContract.greet();
+      //web3Context.setGreetingMessage(fetchedGreeting);
 
       const nftContract = new Contract(
-        "0x2AB2CF61C56482e4c530B9488ba6e0b4909378Ca",
+        NFT_CONTRACT_ADDRESS,
         NFT_CONTRACT_ABI,
         signer,
       );
 
       const address = await signer.getAddress();
       const balance = await nftContract.balanceOf(address);
+      console.log("nft balance: ", balance);
       if (balance > 0) {
         let ownedStones: PowerStoneNft[] = [];
         const ownedTokensResponse = await nftContract.tokensOfOwner(address);
