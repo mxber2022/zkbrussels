@@ -127,7 +127,7 @@ export default function Checkout({
             {hasNFT ? (
               <div className="flex flex-col items-center">
                 <Text>
-                  Congratulations! You own an Infinity Stone NFT. Enjoy gas-free
+                  Congratulations! You own an Faucet NFT. Enjoy gas-free
                   transactions, courtesy of Stark Industries Paymaster.
                 </Text>
                 <img
@@ -138,11 +138,11 @@ export default function Checkout({
               </div>
             ) : (
               <Text>
-                Unfortunately, you don't own an Infinity Stone NFT. A small gas
+                Unfortunately, you don't own an Faucet NFT. A small gas
                 fee will be charged to update the greeting.
               </Text>
             )}
-            <div className="mb-8 mt-8">
+            {/* <div className="mb-8 mt-8">
               <Image
                 src={zkSyncImage}
                 alt="zkSync Era Logo"
@@ -168,7 +168,7 @@ export default function Checkout({
                 repo
               </a>{" "}
               for more ideas!
-            </Text>
+            </Text> */}
           </div>
         </section>
       </main>
