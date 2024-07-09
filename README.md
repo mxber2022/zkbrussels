@@ -37,13 +37,13 @@ This project aims to streamline the process of distributing testnet tokens on th
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/zksync-testnet-token-distributor.git
-    cd zksync-testnet-token-distributor
+    git clone https://github.com/mxber2022/zkbrussels.git
+    cd gated-nft
     ```
 
 2. Install dependencies:
     ```bash
-    npm install
+    yarn
     ```
 
 ## Usage
