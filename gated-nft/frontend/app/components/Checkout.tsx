@@ -97,7 +97,7 @@ export default function Checkout({
                               : "white",
                         }}
                       >
-                        {nfts[0].name}
+                        {"Hackers"}
                       </span>
                     </dt>
                     <dd className="flex items-center text-emerald-500 font-bold">
@@ -130,11 +130,11 @@ export default function Checkout({
                   Congratulations! You own an Faucet NFT. Enjoy gas-free
                   transactions, courtesy of Stark Industries Paymaster.
                 </Text>
-                <img
+                {/* <img
                   className="h-36"
                   src={nfts[0].image}
                   alt="Power Stone Image"
-                />
+                /> */}
               </div>
             ) : (
               <Text>
