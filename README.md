@@ -2,6 +2,8 @@
 
 This project provides a solution for distributing zkSync testnet tokens to users who hold a specific NFT (for example hackathon). The system leverages a paymaster to cover transaction fees for users, ensuring a seamless and cost-free experience for eligible users.
 
+The project also includes Zero-Knowledge Proof (ZKP) circuit build using Circom, generate proofs with SnarkJS, and integrate it into a Solidity smart contract to send anonymous feedback. 
+
 ## Table of Contents
 
 - [Introduction](#introduction)
