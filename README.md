@@ -1,4 +1,4 @@
-# ZK faucet Distributor
+# ZK Distributor
 
 This project provides a solution for distributing zkSync testnet tokens to users who hold a specific NFT (for example hackathon). The system leverages a paymaster to cover transaction fees for users, ensuring a seamless and cost-free experience for eligible users.
 
