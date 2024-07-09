@@ -25,6 +25,11 @@ This project aims to streamline the process of distributing testnet tokens on th
 - Use a paymaster to cover transaction fees.
 - Prevent multiple claims from the same user.
 - Simple and user-friendly claiming process.
+- faucet can be claimed only if you hold specific nft
+- only whitelisted user/nftholder can claim
+- claimed only once
+- Any body can donate faucet to contract
+
 
 ## Requirements
 
